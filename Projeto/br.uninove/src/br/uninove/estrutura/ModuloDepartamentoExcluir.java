@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class ModuloDepartamentoExcluir extends FuncaoSistema {
 
     public ModuloDepartamentoExcluir() {
-        super("Ecluir", "Excluir deparamento");
+        super("Excluir", "Excluir deparamento");
     }
 
     @Override
