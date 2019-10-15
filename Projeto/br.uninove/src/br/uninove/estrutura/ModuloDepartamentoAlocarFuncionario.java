@@ -17,7 +17,6 @@ public class ModuloDepartamentoAlocarFuncionario extends FuncaoSistema {
         ScannerUtil.mostrar(getDescricao());
 
         EmpresaService service = EmpresaService.getInstance();
-        Scanner leitor = new Scanner(System.in);
         Departamento departamento = null;
 
         boolean sair = false;
@@ -82,7 +81,13 @@ public class ModuloDepartamentoAlocarFuncionario extends FuncaoSistema {
                     break;
                 }
                 
+                Departamento alocado =  service.getDepartamento(funcionario);
+                if (alocado != null) {
+                    alocado.removerFuncionario(funcionario);
+                }
+                
                 departamento.alocarFuncionario(funcionario);
+                
                 ScannerUtil.mostrar("Funcionario alocado com sucesso!");
                 sair = true;
 

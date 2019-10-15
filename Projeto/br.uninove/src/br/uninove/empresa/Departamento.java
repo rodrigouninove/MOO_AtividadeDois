@@ -30,6 +30,10 @@ public class Departamento {
         
         funcionarios.add(funcionario);
     }
+    
+    public void removerFuncionario(Funcionario funcionario){
+        this.funcionarios.remove(funcionario);
+    }
 
     public boolean funcionarioAlocado(Funcionario funcionario) {
         return this.funcionarios.contains(funcionario);
